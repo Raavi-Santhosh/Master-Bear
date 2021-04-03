@@ -1,0 +1,82 @@
+---
+id: data-types
+slug: matlab-data-types
+title: Data Types
+---
+# Data Types
+
+The basic data type in MATLAB is the array or matrix. Matlab has 15 fundamental data types where each data type is in the build type of an array or matrix.
+
+![MATLAB Data Types](https://static.javatpoint.com/tutorial/matlab/images/matlab-data-types.png)
+
+## Numerical Array Types
+
+Numerical types in MATLAB contains Integers (Non-fractional values) and Floats (fractional values). By default, all numerical values in MATLAB are floating point numbers with double-precision .
+
+### Integer Types
+
+Even in Integers, MATLAB has four signed and four unsigned integer array types.
+
+**Unsigned Integers -** Unsigned integers can only hold values greater than or equal to zero (>=0) i.e., only positive values.
+
+**Signed Integers -** Signed types enable to work with a negative integer as well as  positive as Most SIgnificant Bit is reserved to indicate the sign of the number.
+
+**SIgned Integers vs Unsigned Integers**
+
+Signed integers cannot perform as wide a range of number as the unsigned integer type because one bit is used to designate positive or negative signs for the number. Unsigned types give a wider range of numbers, but these numbers can only be zero or positive.
+
+| Integer Data Type       | Range of Values           | Type Conversion Function |
+| :---------------------- | ------------------------- | ------------------------ |
+| 8-Bit Signed Integer    | -128 to 127               | `int8()`                 |
+| 8-Bit Unsigned Integer  | 0 to 255                  | `uint8()`                |
+| 16-Bit Signed Integer   | 32768 to 32767            | `int16()`                |
+| 16-Bit Unsigned Integer | 0 to 65535                | uint16()                 |
+| 32-Bit Signed Integer   | -2147483648 to 2147483647 | `int32()`                |
+| 32-Bit Unsigned Integer | 0 to 4294967295           | `unit32()`               |
+| 64-BIt Signed Integer   | -2^63 to 2^63-1           | `int64()`                |
+| 64-Bit Unsigned Integer | 0 to 2^64                 | `uint64()`               |
+
+### Float Type
+
+MATLAB show floating-point numbers in either double-precision or single-precision format. The default is double-precision, but we can convert that to of single-precision with a simple conversion function.
+
+**Double-Percision Floating Point Number**
+
+MATLAB composes the double data type according to IEEE Standard 754 for  double precision. Any value stored as a double-needed 64 bits, formatted as shown in the table below:
+
+| Bits                         | Usage                             |
+| ---------------------------- | --------------------------------- |
+| 51 to 0                      |                                   |
+| 62 to 52                     |                                   |
+| 63                           | Sign (Positive = 0, Negative = 1) |
+| **Type Conversion Function** | `double()`                        |
+
+**Single-Percision Floating Point Number**
+
+MATLAB composes the double data type according to IEEE Standard 754 for  double precision. Any value stored as a single-needed 32 bits, formatted as shown in the table below:
+
+| Bits                         | Usage                             |
+| ---------------------------- | --------------------------------- |
+| 22 to 0                      |                                   |
+| 30 to 23                     |                                   |
+| 31                           | Sign (Positive = 0, Negative = 1) |
+| **Type Conversion Function** | `single()`                        |
+
+### MATLAB Functions Associated with Data Types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

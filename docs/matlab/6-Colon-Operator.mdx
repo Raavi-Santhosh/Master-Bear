@@ -1,0 +1,154 @@
+# Colon Operator
+
+Colon operator ( `:` ) is used to create vectors, array subscripting and most frequently used in `for` loop operations.
+
+## Creating a Row Vector
+
+Colon operator can be used to create a row vector.
+
+### **Syntax** - 1
+
+```matlab
+vec = <initial_val> : <final_val>
+```
+
+When initial_val and final_val is specified, then MATLAB creates a row vector starting from initial value to final value (both values are included) with the increment of 1.
+
+#### Example
+
+```matlab
+x = 3 : 10;
+disp(x);	
+```
+
+#### Output
+
+```matlab
+3    4    5    6    7    8    9   10
+```
+
+Initial value is mentioned as 3 and final value is as 10, so MATLAB generates a row vector from 3 to 10 with increment of 1 while including both initial and final values as displayed in the output.
+
+### Syntax - 2
+
+We can also specify our desired incremental value or expression while generating row vector using colon operator.
+
+```matlab
+vec = <initial_val> : <incremental_expression> : <final_val>
+```
+
+#### Example - 1
+
+```matlab
+y = 100 : -5 : 50;
+disp(y);
+```
+
+#### Output - 1
+
+```
+100    95    90    85    80    75    70    65    60    55    50
+```
+
+In the above example, we have mentioned -5 as `incremental_expression`, it means that the final generated row vector will be decremented by value of 5 from initial value till it reaches the final value. Make sure that initial value is greater than the final value in these kind of scenarios.
+
+#### Example - 2
+
+```matlab
+0:pi/8:pi
+```
+
+#### Output  - 2
+
+```
+ans =
+   Columns 1 through 7
+      0    0.3927    0.7854    1.1781    1.5708    1.9635    2.3562
+   Columns 8 through 9
+      2.7489    3.1416
+```
+
+Instead of using positive or negative value at `incremental_expression` we can also use a expression as shown in the above example. It just creates a regualarly spaced vector using `incremental_expression` as increment between expressions.
+
+## Subscripting a Vector using colon operator
+
+We can fetch a particular value from a vector by mentioning the index number of the value as shown below. In MATLAB index starts with 1 not with 0 like in Python. So, if you are trying to fetch 1st value from vector or 1D array mention index number as 1 not 0.
+
+```matlab
+vec = [3 4 32 77 45 33 21 90];
+disp(vec(2)); % Fetching value 4 from 'vec' vector
+```
+
+**Output**
+
+```matlab
+4
+```
+
+**What if we want to fetch a set of elements from the vector?**
+
+We can get a set of elements from vector or 1D array using colon operator like shown below.
+
+```matlab
+vec = [3 4 32 77 45 33 21 90];
+
+% fetching elements of index 2 to 6
+disp(vec(2:6);
+```
+
+**Output**
+
+```matlab
+4    32    77    45    33
+```
+
+## Subscripting a Matrix using colon operator
+
+We can also subscript a Matrix and can get a sub matrix from it using colon operator.
+
+```matlab
+A = [1 2 3 4; 4 5 6 7; 7 8 9 10];
+disp(A);
+
+A(:,2)      % all rows and second column of A
+A(:,2:3)    % all rows, second and third column of A
+A(2:3,2:3)  % second and third rows and second and third columns
+```
+
+**Output**
+
+```matlab
+A =
+      1     2     3     4
+      4     5     6     7
+      7     8     9    10
+
+ans =
+      2
+      5
+      8
+
+ans =
+      2     3
+      5     6
+      8     9
+
+ans =
+      5     6
+      8     9
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

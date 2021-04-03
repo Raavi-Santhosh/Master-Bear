@@ -1,0 +1,132 @@
+# Functions
+
+Function is a set of statements that together performs a specific task.
+
+## Function Declaration
+
+In MATLAB, functions are defined in saperate files. The name of the function and name of the file where function resist should be the same.
+
+Functions in MATLAB can accept more than one input arguments and can return more than one output arguments.
+
+Functions will have their own workspace to operate on variables called as **local workspace**. This local workspace is saperate from the **base workspace** i.e., the workspace we access at the MATLAB command prompt.
+
+### Syntax
+
+```matlab
+function [<array_of_return_arguments>] = <function_name>(<array_of_input_arguments)
+```
+
+**Sample function declaration statement**
+
+```matlab
+function [out1, out2, out3, out4] = my_fun(in1, in2, in3)
+```
+
+Always function declaration must start with a `function` keyword and dont forget to mentioning the same name to function and file in which the function resist.
+
+### Example
+
+```matlab
+function max = mymax(n1, n2, n3, n4, n5)
+
+%This function calculates the maximum of the
+% five numbers given as input
+
+    max =  n1;
+    if(n2 > max)
+       max = n2;
+    end
+    if(n3 > max)
+       max = n3;
+    end
+    if(n4 > max)
+       max = n4;
+    end
+    if(n5 > max)
+       max = n5;
+    end
+```
+
+In the above example, function name is *mymax* so this function should be written in a file named *mymax.m*. This function accepts five arguments and returns single argument.
+
+The comment lines that come right after the function statement provide the help text. These lines are printed when we try to get the some documentation using help command as shown below
+
+```matlab
+help mymax
+```
+
+MATLAB will return the comment line which are right after the function statement as shown below
+
+```matlab
+This function calculates the maximum of the
+   five numbers given as input
+```
+
+## Primary and Sub-Functions
+
+Each function file contains a required primary function that appears first and any number of optional sub-functions that comes after the primary function and used by it.
+
+Primary functions can be called from outside of the file that defines them, either from command line or from other functions, but  sub-functions cannot be called from command line or other functions, outside the function file.
+
+Sub-functions are visible only to the primary function and other sub-functions within the function file that defines them.
+
+### Example
+
+```matlab
+function [x1,x2] = quadratic(a,b,c)
+
+  %this function returns the roots of 
+  % a quadratic equation.
+  % It takes 3 input arguments
+  % which are the co-efficients of x2, x and the 
+  %constant term
+  % It returns the roots
+  
+  d = disc(a,b,c); 
+  x1 = (-b + d) / (2*a);
+  x2 = (-b - d) / (2*a);
+  
+end   % end of quadratic
+
+function dis = disc(a,b,c) 
+
+  %function calculates the discriminant
+  dis = sqrt(b^2 - 4*a*c);
+  
+end   % end of sub-function
+```
+
+The function file *quadratic.m* contains the primary function *quadratic* and the sub-function *disc*, which calculates the discriminant.
+
+## Global variable
+
+If you wnat to share a variable between one or more function and base workspace then for this,  you need to declare the variable as global in all the functions and at the base workspace.
+
+The global declaration must occur before the variable is actually used in a function. It is a good practice to use capital letters for the names of global variables to distinguish them from other variables.
+
+### Example
+
+Let us create a function file named average.m
+
+```matlab
+function avg = average(nums)
+  global TOTAL
+  avg = sum(nums)/TOTAL;
+end
+```
+
+Create a script file
+
+```
+global TOTAL; % global variable declaration at base workspace
+TOTAL = 10;
+n = [34, 45, 25, 45, 33, 19, 40, 34, 38, 42];
+av = average(n)
+```
+
+### Output
+
+```
+av =  35.500
+```
+

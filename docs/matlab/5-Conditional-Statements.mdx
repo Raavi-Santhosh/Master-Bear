@@ -1,0 +1,330 @@
+Conditional statements comes handy when a set of instructions are need to be executed only when a certain condition is met.
+
+The following conditional statements are availabe in MATLAB
+
+- if... statement
+- if... else... statement
+- if... elseif... elseif.... else statement
+- Nested if... statement
+- switch... case... statement
+
+## `if` statement
+
+#### Syntax
+
+```matlab
+if <conditional_expression>
+	statement 1  % if block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+end
+
+% statements after if
+```
+
+Body of `if` will only executed when the `conditional_expression` is evaluated to **true**. If the `conditional_expression` evaluates to **false**, then the first set of code after the end statement will be executed
+
+#### Flow Diagram
+
+![MATLAB if...end statement](https://static.javatpoint.com/tutorial/matlab/images/matlab-if-end-statement.png)
+
+#### Example - 1
+
+```matlab
+a = 10;
+
+% check the condition using if statement 
+if a < 20 
+  % if condition is true then print the following 
+  fprintf('a is less than 20\n' );
+end
+
+fprintf('value of a is : %d\n', a); % This statement will executed even if block executes or not
+```
+
+In the above example, the if condition is evaluated to true so,  line 6 is executed ends the if block.
+
+#### Output
+
+```matlab
+a is less than 20
+value of a is : 10
+```
+
+#### Example - 2
+
+```matlab
+a = 30;
+
+% check the condition using if statement 
+if a < 20 
+  % if condition is true then print the following 
+  fprintf('a is less than 20\n' );
+end
+
+fprintf('value of a is : %d\n', a); % This statement will executed even if block executes or not
+```
+
+In the above example, if block is evaluated to false so if will not execute line 6.
+
+#### Output
+
+```matlab
+value of a is : 30
+```
+
+## `if... else...` statement
+
+#### Syntax
+
+```matlab
+if <conditional_expression>
+	statement 1  % if block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+
+else
+	statement 1  % if block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+
+end
+
+% statements after if...else...
+```
+
+Body of `if` will only executed when the `conditional_expression` is evaluated to **true**. If the `conditional_expression` evaluates to **false**, then the statements inside the else block will be executed.
+
+![MATLAB if...else statement](https://www.tutorialspoint.com/matlab/images/if_else_statement.jpg)
+
+#### Example 
+
+```matlab
+a = 100;
+
+% check the boolean condition 
+if a < 20 
+  % if condition is true then print the following 
+  fprintf('a is less than 20\n' );
+else
+  % if condition is false then print the following 
+  fprintf('a is not less than 20\n' );
+end
+  
+fprintf('value of a is : %d\n', a);
+```
+
+#### Output
+
+```matlab
+a is not less than 20
+value of a is : 100
+```
+
+## `if... elseif...else...` statement
+
+`if` statement can be followed by one or more `elseif` statements if we want to test many conditions.
+
+While using `if... elseif...else...` statements, there are few points to remember −
+
+- An `if` can have zero or one `else`'s and it must come after any `elseif`.
+- An `if` can have zero to many `elseif`'s and they must come before the `else`.
+
+#### Syntax
+
+```matlab
+if <conditional_expression>
+	statement 1  % if block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+
+elseif <conditional_expression>
+	statement 1  % elseif block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+
+elseif <conditional_expression>
+	statement 1  % elseif block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+	
+else <conditional_expression>
+	statement 1  % else block starts here
+	statement 2
+	statement 3
+	....
+	....
+	statement n
+end
+
+% statements after if...elseif...
+```
+
+#### Example 
+
+```matlab
+a = 100;
+
+%check the boolean condition 
+if a == 10 
+  % if condition is true then print the following 
+  fprintf('Value of a is 10\n' );
+
+elseif( a == 20 )
+  % if else if condition is true 
+  fprintf('Value of a is 20\n' );
+
+elseif a == 30 
+	% if else if condition is true  
+	fprintf('Value of a is 30\n' );
+
+else
+  % if none of the conditions is true '
+  fprintf('None of the values are matching\n');
+  fprintf('Exact value of a is: %d\n', a );
+
+end
+```
+
+#### Output
+
+```matlab
+None of the values are matching
+Exact value of a is: 100
+```
+
+## Nested `if` Statement
+
+A `if` statement inside another `if` statement is called as Nested `if` statement
+
+### Syntax
+
+```matlab
+if <conditional_expression1>
+   % Executes when the boolean expression 1 is true 
+   
+   if <conditional_expression2>
+      % Executes when the boolean expression 2 is true    
+   end
+
+end
+```
+
+*We can also use else and elseif inside the nested if statements.*
+
+### Example
+
+```matlab
+a = 100;
+b = 200;
+   % check the boolean condition 
+if( a == 100 )
+    % if condition is true then check the following 
+    if( b == 200 )
+        % if condition is true then print the following 
+        fprintf('Value of a is 100 and b is 200\n' );
+    end
+
+end
+fprintf('Exact value of a is : %d\n', a );
+fprintf('Exact value of b is : %d\n', b );
+```
+
+### Output
+
+```matlab
+Value of a is 100 and b is 200
+Exact value of a is : 100
+Exact value of b is : 200
+```
+
+## `switch... case...` Statement
+
+`switch... case...` conditional statement is alternative to `if... elseif...` statement which allows us to execute one set of statements out of several other choices.
+
+### Syntax
+
+```matlab
+switch <switch_conditional_expression>
+   case <case_conditional_expression1>
+      <statements>
+   case <case_conditional_expression2>
+      <statements>
+      ...
+      ...
+   otherwise
+      <statements>
+end
+```
+
+### Rules to remember
+
+- `switch_conditional_expression` must evaluate to a scalar or string.
+- `case_conditional_expression` must evaluate to a scalar or string or a cell array of scalars or strings.
+- The switch block tests each case until one of the cases is **true**. 
+- A case is true when −
+  - For numbers, **eq(case_conditional_expression,switch_conditional_expression)**.
+  - For strings, **strcmp(case_conditional_expression,switch_conditional_expression)**.
+  - For objects that support the **eq(case_conditional_expression,switch_conditional_expression)**.
+  - For a cell array case_conditional_expression, at least one of the  elements of the cell array matches switch_expression, as defined above  for numbers, strings and objects.
+
+![Flowchart of switch statement](https://cdn.programiz.com/sites/tutorial2program/files/flowchart-switch-statement.jpg)
+
+### Example
+
+```matlab
+grade = 'B';
+   switch(grade)
+     case 'A' 
+        fprintf('Excellent!\n' );
+     case 'B' 
+        fprintf('Well done\n' );
+     case 'C' 
+        fprintf('Well done\n' );
+     case 'D'
+        fprintf('You passed\n' );
+     case 'F' 
+        fprintf('Better try again\n' );
+     otherwise
+        fprintf('Invalid grade\n' );
+   end
+```
+
+### Output
+
+```matlab
+Well done
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

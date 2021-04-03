@@ -1,0 +1,174 @@
+# Input & Output Operations
+
+## I/O Operations using `input()` and `disp()` Functions
+
+In Matlab, we can get the data/values from user via keyboard using `input()` function and we can send data to screen which is displayed on command window using `disp()` function
+
+### `input()`
+
+#### **Syntax - 1**
+
+```matlab
+x = input(prompt)
+```
+
+Displays the text in `prompt` and waits for the user to input a value or expressions like pi*4 or rand(3) and press Enter/Return key at the end.
+
+- If a value is entered then that value is returned by the `input()` function
+- If an expression is entered then the value of the evaluated expression is returned by input() function
+- If the user presses the **Return** key without entering anything, then `input()` returns an empty matrix.
+- If the user enters an invalid expression at the prompt, then MATLAB displays the relevant error message, and then redisplays the prompt. 
+
+##### **Example - 1 :- Getting a value from user**
+
+```matlab
+x = input('Enter what you like: ');
+x
+```
+
+At command window enter any value, say, 23
+
+```matlab
+Enter what you like: 23
+```
+
+##### **Output**
+
+```matlab
+x =
+
+    23
+```
+
+##### **Example - 2 :- Getting an expression from user**
+
+```matlab
+x = input('Enter what you like: ');
+x
+```
+
+At command window enter any expresion, say, pi * 4. If the expression entered is valid the it is evaluated and returned by `input()`
+
+```matlab
+Enter a value: pi * 4
+```
+
+##### **Output**
+
+```matlab
+x =
+
+    12.5664
+```
+
+#### **Syntax - 2**
+
+If we dont want to evaluate the expression, as we are only interested to get the text from the user the use the following syntax.
+
+```matlab
+x = input(prompt, 's')
+```
+
+- Returns the entered text by the user without evaluating it as an expression.
+
+##### **Example**
+
+```matlab
+val1 = input('Enter anything: ', 's');
+val1
+```
+
+At command window enter anything, input() function will return what ever user has entered as text without evaluating it.
+
+```matlab
+Enter anything: pi * 4
+```
+
+##### **Output**
+
+```matlab
+val1 =
+
+    pi * 4
+```
+
+### `disp()`
+
+`disp()` is used to display the value of the variable without printing the variable name. If a variable is empty then it will not display anything.
+
+#### **Syntax**
+
+```matlab
+disp(x)
+```
+
+##### **Example**
+
+```matlab
+x = [2 3 4 5];
+disp(x);
+
+str = 'Hello, Good Morning';
+disp(str)
+```
+
+##### **Output**
+
+```matlab
+     2     3     4     5
+
+Hello, Good Morning
+```
+
+## I/O Operations using `fprintf()` and `fscanf()`
+
+input() and disp() are not the only functions to interact with the user. We also have fscanf() and fprintf() to get the data from the user and display data onto the screen respectively.
+
+`fscanf()` and `fprintf()` are the formatted functions  which behave like C language's scanf() and  printf() functions.
+
+### fscanf()
+
+#### Syntax
+
+#### Example
+
+#### Output
+
+
+
+
+
+
+
+### fprintf()
+
+#### Syntax
+
+#### Example
+
+#### Output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
