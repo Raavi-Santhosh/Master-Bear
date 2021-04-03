@@ -3,10 +3,10 @@ module.exports = {
   title: 'Master Bear',
   tagline: 'I\'m Your Master Now!!',
   url: 'https://Raavi-Santhosh.github.io',
-  baseUrl: '/',
+  baseUrl: '/Master-Bear/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'static/img/favicon.ico',
+  favicon: 'img/favicon.ico',
   organizationName: 'Raavi-Santhosh', // Usually your GitHub org/user name.
   projectName: 'Master-Bear', // Usually your repo name.
   themeConfig: {
@@ -14,7 +14,7 @@ module.exports = {
       title: 'Master Bear',
       logo: {
         alt: 'Master Bear Logo',
-        src: 'static/img/logo-Bear.png',
+        src: 'img/logo-Bear.png',
         // srcDark: "img/logo-pretty.svg",
       },
       items: [
