@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'I\'m Your Master Now!!',
   url: 'https://Raavi-Santhosh.github.io',
   baseUrl: '/Master-Bear/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'static/img/favicon.ico',
   organizationName: 'Raavi-Santhosh', // Usually your GitHub org/user name.
@@ -14,7 +14,7 @@ module.exports = {
       title: 'Master Bear',
       logo: {
         alt: 'Master Bear Logo',
-        src: 'static/img/logo-Bear.png',
+        src: './static/img/logo-Bear.png',
         // srcDark: "img/logo-pretty.svg",
       },
       items: [
@@ -24,7 +24,7 @@ module.exports = {
           items: [
             {
               label: 'MATLAB Fundass!',
-              to: 'docs/matlab/1-Matlab-Environment',
+              to: './docs/matlab/1-Matlab-Environment',
             },
         ],
         },
@@ -96,13 +96,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        }, 
-        
-          matlab: {
-            sidebarPath: require.resolve('./sidebarsMatlab.js'),
-            // Please change this to your repo.
-            editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',
         },       
         blog: {
