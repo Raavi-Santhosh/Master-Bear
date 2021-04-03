@@ -29,12 +29,12 @@ module.exports = {
         ],
         },
         // {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left'
-        },
+        // {
+        //   to: 'docs/',
+        //   activeBasePath: 'docs',
+        //   label: 'Docs',
+        //   position: 'left'
+        // },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
