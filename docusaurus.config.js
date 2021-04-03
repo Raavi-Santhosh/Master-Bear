@@ -3,7 +3,7 @@ module.exports = {
   title: 'Master Bear',
   tagline: 'I\'m Your Master Now!!',
   url: 'https://Raavi-Santhosh.github.io',
-  baseUrl: '/Master-Bear/',
+  baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'static/img/favicon.ico',
@@ -14,7 +14,7 @@ module.exports = {
       title: 'Master Bear',
       logo: {
         alt: 'Master Bear Logo',
-        src: './static/img/logo-Bear.png',
+        src: 'static/img/logo-Bear.png',
         // srcDark: "img/logo-pretty.svg",
       },
       items: [
@@ -24,7 +24,7 @@ module.exports = {
           items: [
             {
               label: 'MATLAB Fundass!',
-              to: './docs/matlab/1-Matlab-Environment',
+              to: 'docs/matlab/1-Matlab-Environment',
             },
         ],
         },

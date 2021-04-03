@@ -2,8 +2,8 @@ module.exports = {
 
   "MATLAB Fundass!": {
     "Matlab Environment": [
-        'matlab/matlab-environment',
-        'matlab/matlab-basic-syntax',
+        "matlab/1-Matlab-Environment",
+        "matlab/2-Matlab-Basic-Syntax",
       ],
     },
   
